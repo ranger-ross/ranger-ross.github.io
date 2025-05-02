@@ -12,8 +12,10 @@ This is your first blog post! You can:
 * Write in *Markdown*
 * Add code blocks:
 
-```python
-print("Hello, World!")
+```rust
+fn foo() {
+    println!("Hello, world");
+}
 ```
 
 * Create [links](https://example.com)

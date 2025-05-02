@@ -2,9 +2,9 @@
 title = "Latest posts"
 
 [extra]
-header = { title = "Hi, I'm Ross! 👋", img = "img/profile.webp", img_alt = "YOUR_NAME" }
+header = { title = "Hi, I'm Ross!", img = "img/profile.png", img_alt = "Ross" }
 section_path = "blog/_index.md"
 max_posts = 5
 +++
 
-Welcome to my personal site!
+I like building things, usually in Rust.
