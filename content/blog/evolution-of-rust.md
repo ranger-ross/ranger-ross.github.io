@@ -83,6 +83,9 @@ I hope to see the ecosystem of Rust tools continue to expand and mature in the c
 3. Refining existing features is not the same as introducing completely new features.
 4. New tooling features do not increase the language complexity in the same way as new language features.
 
+None of this is particularly ground breaking, but I think there is some value in having it written down as other may have opposing thoughts on how Rust should evolve.
+I am largely optmistic on Rust's future but we as a community should be selective on which features we introduce into the language.
+
 ---
 
 [^1]: I would not call myself a "Rust expert", but from my discussions with other in the community this is often how people that introduce Rust at their workplace are viewed.
