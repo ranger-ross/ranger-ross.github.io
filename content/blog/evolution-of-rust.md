@@ -10,7 +10,7 @@ Two and a half years later I now completely understand why there is so much buzz
 It solves so many of the pain points I have had in other languages and I generally just find writing Rust more engaging.
 
 However, Rust is not all sunshine and rainbows. There are real pain points that need to be addressed if Rust wants to compete with other popular programming languages.
-Many of these pain points are well known (slow compile times, steap learning curve relative to other languages, etc) and I do not have much to add.
+Many of these pain points are well known (slow compile times, steep learning curve relative to other languages, etc) and I do not have much to add.
 But I do want to explore a topic that is less talked about but is very important in my mind. 
 
 Rust's selection of new features and pace of addition.
@@ -19,11 +19,11 @@ Rust's selection of new features and pace of addition.
 
 Rust has a reputation for being difficult to learn/use compared to "higher" level languages like Javascript and GoLang.
 I find this is a bit overblown, especially for modern Rust. Personally I find that I am nearly as fast if not faster in coding in Rust as I am in other languages.
-However, I did find the learning experience quiet difficult compared to other languages.
+However, I did find the learning experience quite difficult compared to other languages.
 
 Rust has a lot going on. It has a lot of features that you need to interact with in even simple programs.
-When learning Rust, one of the pain points I felt was the shear amount of new concepts I had to learn to get up and running.
-While many of features in Rust are worth while and improve the development experience they increase the learning curve of the language.
+When learning Rust, one of the pain points I felt was the sheer amount of new concepts I had to learn to get up and running.
+While many of the features in Rust are worth while and improve the development experience they increase the learning curve of the language.
 
 As someone who has introduced Rust at their workplace and is viewed as the "Rust expert" [^1], I spend a lot of time teaching Rust and helping teams migrate to Rust.
 A good amount of effort for teams onboarding is getting up to speed with all of the features in Rust.
@@ -31,12 +31,12 @@ A good amount of effort for teams onboarding is getting up to speed with all of 
 
 ## Syntax
 
-At this point in Rust's life, new features should have pass high bar of scrutany to be accept.
-This is especially true for featrues that introduce new syntax.
+At this point in Rust's life, new features should have pass high bar of scrutiny to be accept.
+This is especially true for features that introduce new syntax.
 We already have a lot of syntax in Rust relatively to other languages. 
 Adding new syntax is a tradeoff between making things easier to write (and sometimes read) while requiring users to be aware of this semantics behind the syntax.
 
-Everytime we add a new keyword it adds more things for the user to be familiar with to understand what a program does.
+Every time we add a new keyword it adds more things for the user to be familiar with to understand what a program does.
 The Rust type system gives the user many ways to express their problem, which is great but comes with the drawback of increasing burden to understand code that you did not write.
 I sometimes feel this in code reviews when the author uses a syntax that I do not commonly use.
 
