@@ -13,9 +13,9 @@ However, Rust is not all sunshine and rainbows. There are real pain points that 
 Many of these pain points are well known (slow compile times, steep learning curve relative to other languages, etc) and I do not have much to add.
 But I do want to explore a topic that is less talked about but is very important in my mind. 
 
-Rust's selection of new features and pace of addition.
+**Rust's selection of new features and managing the complexity of the language**
 
-## Friction
+## Onboarding Friction
 
 Rust has a reputation for being difficult to learn/use compared to "higher" level languages like Javascript and GoLang.
 I find this is a bit overblown, especially for modern Rust. Personally I find that I am nearly as fast if not faster in coding in Rust as I am in other languages.
@@ -29,11 +29,11 @@ As someone who has introduced Rust at their workplace and is viewed as the "Rust
 A good amount of effort for teams onboarding is getting up to speed with all of the features in Rust.
 
 
-## Syntax
+## New Syntax
 
-At this point in Rust's life, new features should have pass high bar of scrutiny to be accept.
+At this point in Rust's life, new features should have pass high bar of scrutiny to be accepted.
 This is especially true for features that introduce new syntax.
-We already have a lot of syntax in Rust relatively to other languages. 
+We already have a lot of syntax in Rust relative to other languages. 
 Adding new syntax is a tradeoff between making things easier to write (and sometimes read) while requiring users to be aware of this semantics behind the syntax.
 
 Every time we add a new keyword it adds more things for the user to be familiar with to understand what a program does.
@@ -42,7 +42,7 @@ I sometimes feel this in code reviews when the author uses a syntax that I do no
 
 To point to a specific example where I think this is applicable is [RFC 3680](https://github.com/rust-lang/rfcs/pull/3680).
 To summarize the RFC (as currently written on May 3, 2025), It proposes that we reuse the `use` in a few new ways to make working with `Arc`/`Rc` a more ergonomic.
-As currently written, I do not think this RFC provides enough benefits to out weigh the downsides of introducing new syntax to the language. 
+As currently written, I do not think this RFC provides enough benefits to outweigh the downsides of introducing new syntax to the language. 
 There are many comments on this RFC that echo similar sentiments.
 
 My goal is not to pick on this RFC (as the goal is noble) but simply to illustrate that bar to introduce new syntax/keywords should be very high and needs to meaningfully solve existing problems.
@@ -72,18 +72,18 @@ Above I argue that introducing language features make the language more complex 
 For tooling features, this usually does not apply. For example, `cargo build` hides a lot of the complexity of interacting with `rustc` and makes Rust development vastly more approachable.
 Most tooling features reduce the complexity of Rust users need to deal with on a daily basis.
 
-I hope to see the ecosystem of Rust tools continue to expand and mature of the coming years. [^3]
+I hope to see the ecosystem of Rust tools continue to expand and mature in the coming years. [^3]
 
 ## Recap
 
-1. Rust is already a realatively complex language. We need to be conservative when adding new features.
-2. New language features need to meaningfully solve a problems that real users have.
+1. Rust is already a relatively complex language. We need to be conservative when adding new features.
+2. New language features need to meaningfully solve problems that real users have.
 3. Refining existing features is not the same as introducing completely new features.
 4. New tooling features do not increase the language complexity in the same way as new language features.
 
 ---
 
 [^1]: I would not call myself a "Rust expert", but from my discussions with other in the community this is often how people that introduce Rust at their workplace are viewed.
-[^2]: It's worth noting that this was [discussed](https://rust-lang.zulipchat.com/#narrow/channel/122651-general/topic/Selected.20results.20from.20the.20State.20of.20Rust.202024.20annual.20survey) in the Rust Zulip. And the survey will likely be tweaaked to take this into account.
+[^2]: It's worth noting that this was [discussed](https://rust-lang.zulipchat.com/#narrow/channel/122651-general/topic/Selected.20results.20from.20the.20State.20of.20Rust.202024.20annual.20survey) in the Rust Zulip. And the survey will likely be tweaked to take this into account.
 [^3]: While introducing Rust at my workplace, many of the pain points I ran into were trying to make the Rust tools play nice with our existing systems.
 
