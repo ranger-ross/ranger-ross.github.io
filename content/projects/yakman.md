@@ -16,7 +16,7 @@ local_image = "img/yakman.png"
 
 There are already many solutions out there for managing config so why bother creating yet another?
 
-Let me awnser this with a short story...
+Let me answer this with a short story...
 
 ### Why
 
@@ -73,14 +73,14 @@ And after a very large PR to replace Leptos with SvelteKit, I was left with the 
 
 One of the goals for this project is to be able to "bring your own storage" meaning if you on AWS you can S3. If you are GCP you can use Cloud Storage. If you already have a MySQL database and want to use that sure. Just want to store the files locally on an EC2 server, I probably wont reccomened it but you can. One of YakMan's biggest features is being (somewhat) storage agnostic.
 
-To implment feature I used the [adapter pattern](https://en.wikipedia.org/wiki/Adapter_pattern). I create a `StorageAdapter` trait in Rust (similar to an interface in our languages) that provided methods to read/write data to different storage services. This was probably my best decision I made during the early development of this project.
+To implement feature I used the [adapter pattern](https://en.wikipedia.org/wiki/Adapter_pattern). I create a `StorageAdapter` trait in Rust (similar to an interface in our languages) that provided methods to read/write data to different storage services. This was probably my best decision I made during the early development of this project.
 
-To add support for new storage service, I just needed to implment the `StorageAdapter` trait for that service and it would "just work." It was honestly amazing to see YakMan run bug free on a completely different database after just 30 minutes of coding to add a new adapter.
+To add support for new storage service, I just needed to implement the `StorageAdapter` trait for that service and it would "just work." It was honestly amazing to see YakMan run bug free on a completely different database after just 30 minutes of coding to add a new adapter.
 
 ### OAuth and SSO can be tricky
 
 OAuth 2 is a very complicated protocol. There are many different "flows" and it a be tricky to work with especially if the OAuth provider does not follow all of standards. 
 
-When implmenting Single Sign On for YakMan, I ran into a handful of issues where OAuth providers just did not implment some part of the OAuth protocol. This was frustrating but taking a step back I can understand why. OAuth has been a constant work in progress for over a decade now. It has been implmented many RFCs and there are many flows that serve different purposes. It is understandable that not all providers support every feature to the latest RFC.
+When implementing Single Sign On for YakMan, I ran into a handful of issues where OAuth providers just did not implement some part of the OAuth protocol. This was frustrating but taking a step back I can understand why. OAuth has been a constant work in progress for over a decade now. It has been implemented many RFCs and there are many flows that serve different purposes. It is understandable that not all providers support every feature to the latest RFC.
 
-This introduced some challanges and now I understand why many SaaS products charge for SSO. Its a lot of effort to maintain and very difficult to support all identity providers.
+This introduced some challenges and now I understand why many SaaS products charge for SSO. Its a lot of effort to maintain and very difficult to support all identity providers.

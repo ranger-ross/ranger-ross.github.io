@@ -1,0 +1,13 @@
+name: Checks
+on: 
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  spelling:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: crate-ci/typos@master
