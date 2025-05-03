@@ -58,8 +58,10 @@ One interesting data point in the [2024 State of Rust Survey](https://blog.rust-
 With the options provided I would probably fall into the "I am satisfied with the current pace of development."
 However, the current options miss the difference between introducing new features and improving existing features.[^2]
 
-I find that I often desire improvements to existing Rust feature rather than new features entirely.
-A great example of this is the "Async Rust". Async Rust is not a new feature, but it still does not feel "complete".
+I find that I often desire improvements to existing Rust features rather than new features entirely.
+
+A great example of this is the "Async Rust". Async Rust is not a new feature, but it still does not feel "complete". 
+Async traits are still not dyn comptaible without using [async_trait](https://docs.rs/async-trait/latest/async_trait/), Async closures (this was stablized in Rust 1.85), [Async Drop](https://rust-lang.github.io/async-fundamentals-initiative/roadmap/async_drop.html) is still unstable.
 In 2025, I am the most excited about the [project goal](https://rust-lang.github.io/rust-project-goals/2025h1/async.html) to refine async rust.
 
 
