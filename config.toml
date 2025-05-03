@@ -1,7 +1,7 @@
-base_url = "https://YOUR_URL.TLD"
-title = "site title"
-description = "YOUR_SITE_DESCRIPTION"
-author = "YOUR_NAME"
+base_url = "https://ranger-ross.github.io"
+title = "ranger-ross"
+description = "Ross's thoughts"
+author = "Ross Sullivan"
 theme = "tabi"
 generate_feeds = true
 compile_sass = true
@@ -231,8 +231,6 @@ invert_title_order = false
 
 menu = [
     { name = "blog", url = "blog", trailing_slash = true },
-    { name = "archive", url = "archive", trailing_slash = true },
-    { name = "tags", url = "tags", trailing_slash = true },
     { name = "projects", url = "projects", trailing_slash = true },
 ]
 
