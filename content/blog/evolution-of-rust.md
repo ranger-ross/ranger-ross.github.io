@@ -1,0 +1,89 @@
++++
+title = "The Evolution of Rust"
+date = "2025-05-03"
+description = "Thoughts on how Rust is evolving"
++++
+
+
+I started learning [Rust](https://www.rust-lang.org/) in late 2022 after finally giving into the hype.
+Two and a half years later I now completely understand why there is so much buzz around this language.
+It solves so many of the pain points I have had in other languages and I generally just find writing Rust more engaging.
+
+However, Rust is not all sunshine and rainbows. There are real pain points that need to be addressed if Rust wants to compete with other popular programming languages.
+Many of these pain points are well known (slow compile times, steap learning curve relative to other languages, etc) and I do not have much to add.
+But I do want to explore a topic that is less talked about but is very important in my mind. 
+
+Rust's selection of new features and pace of addition.
+
+## Friction
+
+Rust has a reputation for being difficult to learn/use compared to "higher" level languages like Javascript and GoLang.
+I find this is a bit overblown, especially for modern Rust. Personally I find that I am nearly as fast if not faster in coding in Rust as I am in other languages.
+However, I did find the learning experience quiet difficult compared to other languages.
+
+Rust has a lot going on. It has a lot of features that you need to interact with in even simple programs.
+When learning Rust, one of the pain points I felt was the shear amount of new concepts I had to learn to get up and running.
+While many of features in Rust are worth while and improve the development experience they increase the learning curve of the language.
+
+As someone who has introduced Rust at their workplace and is viewed as the "Rust expert" [^1], I spend a lot of time teaching Rust and helping teams migrate to Rust.
+A good amount of effort for teams onboarding is getting up to speed with all of the features in Rust.
+
+
+## Syntax
+
+At this point in Rust's life, new features should have pass high bar of scrutany to be accept.
+This is especially true for featrues that introduce new syntax.
+We already have a lot of syntax in Rust relatively to other languages. 
+Adding new syntax is a tradeoff between making things easier to write (and sometimes read) while requiring users to be aware of this semantics behind the syntax.
+
+Everytime we add a new keyword it adds more things for the user to be familiar with to understand what a program does.
+The Rust type system gives the user many ways to express their problem, which is great but comes with the drawback of increasing burden to understand code that you did not write.
+I sometimes feel this in code reviews when the author uses a syntax that I do not commonly use.
+
+To point to a specific example where I think this is applicable is [RFC 3680](https://github.com/rust-lang/rfcs/pull/3680).
+To summarize the RFC (as currently written on May 3, 2025), It proposes that we reuse the `use` in a few new ways to make working with `Arc`/`Rc` a more ergonomic.
+As currently written, I do not think this RFC provides enough benefits to out weigh the downsides of introducing new syntax to the language. 
+There are many comments on this RFC that echo similar sentiments.
+
+My goal is not to pick on this RFC (as the goal is noble) but simply to illustrate that bar to introduce new syntax/keywords should be very high and needs to meaningfully solve existing problems.
+
+
+## Refining Existing Features
+
+One interesting data point in the [2024 State of Rust Survey](https://blog.rust-lang.org/2025/02/13/2024-State-Of-Rust-Survey-results/) was the results of "What is your opinion on how fast Rust evolves?"
+
+![](/img/what-do-you-think-about-rust-evolution.svg)
+
+
+With the options provided I would probably fall into the "I am satisfied with the current pace of development."
+However, the current options miss the difference between introducing new features and improving existing features.[^2]
+
+I find that I often desire improvements to existing Rust feature rather than new features entirely.
+A great example of this is the "Async Rust". Async Rust is not a new feature, but it still does not feel "complete".
+In 2025, I am the most excited about the [project goal](https://rust-lang.github.io/rust-project-goals/2025h1/async.html) to refine async rust.
+
+
+## Tooling Features
+
+Until now, I have been primarily talking about language features and not the greater Rust ecosystem.
+I have a very difficult perspective on adding new features to tools in the Rust ecosystem.
+
+Above I argue that introducing language features make the language more complex and introduces development friction when working in a team.
+For tooling features, this usually does not apply. For example, `cargo build` hides a lot of the complexity of interacting with `rustc` and makes Rust development vastly more approachable.
+Most tooling features reduce the complexity of Rust users need to deal with on a daily basis.
+
+I hope to see the ecosystem of Rust tools continue to expand and mature of the coming years. [^3]
+
+## Recap
+
+1. Rust is already a realatively complex language. We need to be conservative when adding new features.
+2. New language features need to meaningfully solve a problems that real users have.
+3. Refining existing features is not the same as introducing completely new features.
+4. New tooling features do not increase the language complexity in the same way as new language features.
+
+---
+
+[^1]: I would not call myself a "Rust expert", but from my discussions with other in the community this is often how people that introduce Rust at their workplace are viewed.
+[^2]: It's worth noting that this was [discussed](https://rust-lang.zulipchat.com/#narrow/channel/122651-general/topic/Selected.20results.20from.20the.20State.20of.20Rust.202024.20annual.20survey) in the Rust Zulip. And the survey will likely be tweaaked to take this into account.
+[^3]: While introducing Rust at my workplace, many of the pain points I ran into were trying to make the Rust tools play nice with our existing systems.
+
