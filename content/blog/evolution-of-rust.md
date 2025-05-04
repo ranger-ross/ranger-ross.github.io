@@ -21,7 +21,7 @@ I have began to wonder if the pace of new feature additions is healthy long term
 It begs the question "What will Rust look like in 2035?"
 
 To be clear, we need new Rust language features as we do not want the to stagnate.
-But at what point is a language solidified and the pace of which large langauge features added slowed down?
+But at what point is a langauge solidified and the pace of which large langauge features added slowed down?
 I am not saying Rust is at that point yet but its an interesting question to ponder.
 
 ## Onboarding Friction
@@ -70,7 +70,7 @@ However, the current options miss the difference between introducing new feature
 I find that I often desire improvements to existing Rust features rather than new features entirely.
 
 A great example of this is the "Async Rust". Async Rust is not a new feature, but it still does not feel "complete". 
-Async traits are still not dyn comptaible without using [async_trait](https://docs.rs/async-trait/latest/async_trait/), Async closures (this was stablized in Rust 1.85), [Async Drop](https://rust-lang.github.io/async-fundamentals-initiative/roadmap/async_drop.html) is still unstable.
+Async traits are still not dyn comptaible without using [async_trait](https://docs.rs/async-trait/latest/async_trait/), Async closures (this was stabilized in Rust 1.85), [Async Drop](https://rust-lang.github.io/async-fundamentals-initiative/roadmap/async_drop.html) is still unstable.
 In 2025, I am the most excited about the [project goal](https://rust-lang.github.io/rust-project-goals/2025h1/async.html) to refine async rust.
 
 
