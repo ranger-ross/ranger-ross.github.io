@@ -15,10 +15,10 @@ But I do want to explore a topic that is less talked about but is very important
 
 **Rust's selection of new features and managing the complexity of the language**
 
-Rust has been changing rapidly over the past 10 years and this has help fuel its success.
-After 10 years since 1.0 Rust has a gained a lot of features.
+Rust has been changing rapidly over the past 10 years and this has helped fuel it's success.
+After 10 years since 1.0, Rust has a gained a lot of features.
 I have began to wonder if the pace of new feature additions is healthy long term.
-What will Rust look like in 2035?
+It begs the question "What will Rust look like in 2035?"
 
 To be clear, we need new Rust language features as we do not want the to stagnate.
 But at what point is a language solidified and the pace of which large langauge features added slowed down?
@@ -64,7 +64,7 @@ One interesting data point in the [2024 State of Rust Survey](https://blog.rust-
 ![](/img/what-do-you-think-about-rust-evolution.svg)
 
 
-With the options provided I would probably fall into the "I am satisfied with the current pace of development."
+With the options provided I would probably fall into the "I am satisfied with the current pace of development" bucket.
 However, the current options miss the difference between introducing new features and improving existing features.[^2]
 
 I find that I often desire improvements to existing Rust features rather than new features entirely.
