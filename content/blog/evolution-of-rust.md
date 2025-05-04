@@ -20,8 +20,8 @@ After 10 years since 1.0, Rust has a gained a lot of features.
 I have began to wonder if the pace of new feature additions is healthy long term.
 It begs the question "What will Rust look like in 2035?"
 
-To be clear, we need new Rust language features as we do not want the to stagnate.
-But at what point is a langauge solidified and the pace of which large langauge features added slowed down?
+To be clear, we need new Rust language features as we do not want to stagnate.
+But at what point is a language solidified and the pace of which large language features added slowed down?
 I am not saying Rust is at that point yet but its an interesting question to ponder.
 
 ## Onboarding Friction
