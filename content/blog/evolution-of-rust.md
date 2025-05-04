@@ -15,10 +15,19 @@ But I do want to explore a topic that is less talked about but is very important
 
 **Rust's selection of new features and managing the complexity of the language**
 
+Rust has been changing rapidly over the past 10 years and this has help fuel its success.
+After 10 years since 1.0 Rust has a gained a lot of features.
+I have began to wonder if the pace of new feature additions is healthy long term.
+What will Rust look like in 2035?
+
+To be clear, we need new Rust language features as we do not want the to stagnate.
+But at what point is a language solidified and the pace of which large langauge features added slowed down?
+I am not saying Rust is at that point yet but its an interesting question to ponder.
+
 ## Onboarding Friction
 
 Rust has a reputation for being difficult to learn/use compared to "higher" level languages like Javascript and GoLang.
-I find this is a bit overblown, especially for modern Rust. Personally I find that I am nearly as fast if not faster in coding in Rust as I am in other languages.
+I feel this is a bit overblown, especially for modern Rust. Personally I find that I am nearly as fast if not faster in coding in Rust as I am in other languages.
 However, I did find the learning experience quite difficult compared to other languages.
 
 Rust has a lot going on. It has a lot of features that you need to interact with in even simple programs.
