@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://ranger-ross.github.io/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:base_url>https:&#x2F;&#x2F;ranger-ross.github.io</tabi:base_url>
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>This is a web feed, also known as an Atom feed. Subscribe by copying the URL from the address bar into your newsreader. Visit About Feeds to learn more and get started. It&#x27;s free.</tabi:about_feeds>
+        <tabi:visit_the_site>Visit website</tabi:visit_the_site>
+        <tabi:recent_posts>Recent posts</tabi:recent_posts>
+        <tabi:last_updated_on>Updated on $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>date</tabi:post_listing_date>
+        <tabi:current_section>ranger-ross</tabi:current_section>
+    </tabi:metadata><link rel="extra-stylesheet" href="https://ranger-ross.github.io/skins/blue.css?h=a4dc1e94d3f5759784d2" /><title>ranger-ross</title>
+        <subtitle>Ross&#x27;s thoughts</subtitle>
+    <link href="https://ranger-ross.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://ranger-ross.github.io" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-05-03T00:00:00+00:00</updated>
+    <id>https://ranger-ross.github.io/atom.xml</id><entry xml:lang="en">
+        <title>The Evolution of Rust</title>
+        <published>2025-05-03T00:00:00+00:00</published>
+        <updated>2025-05-03T00:00:00+00:00</updated>
+        <author>
+            <name>Ross Sullivan</name>
+        </author>
+        <link rel="alternate" href="https://ranger-ross.github.io/blog/evolution-of-rust/" type="text/html"/>
+        <id>https://ranger-ross.github.io/blog/evolution-of-rust/</id>
+        
+            <content type="html">&lt;p&gt;I started learning &lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;&quot;&gt;Rust&lt;&#x2F;a&gt; in late 2022 after finally giving into the hype.
+Two and a half years later I now completely understand why there is so much buzz around this language.
+It solves so many of the pain points I have had in other languages and I generally just find writing Rust more engaging.&lt;&#x2F;p&gt;
+&lt;p&gt;However, Rust is not all sunshine and rainbows. There are real pain points that need to be addressed if Rust wants to compete with other popular programming languages.
+Many of these pain points are well known (slow compile times, steep learning curve relative to other languages, etc) and I do not have much to add.
+But I do want to explore a topic that is less talked about but is very important in my mind.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Rust’s selection of new features and managing the complexity of the language&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Rust has been changing rapidly over the past 10 years and this has helped fuel it’s success.
+After 10 years since 1.0, Rust has a gained a lot of features.
+I have began to wonder if the pace of new feature additions is healthy long term.
+It begs the question “What will Rust look like in 2035?”&lt;&#x2F;p&gt;
+&lt;p&gt;To be clear, we need new Rust language features as we do not want to stagnate.
+But at what point is a language solidified and the pace of which large language features added slowed down?
+I am not saying Rust is at that point yet but its an interesting question to ponder.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;onboarding-friction&quot;&gt;Onboarding Friction&lt;&#x2F;h2&gt;
+&lt;p&gt;Rust has a reputation for being difficult to learn&#x2F;use compared to “higher” level languages like Javascript and GoLang.
+I feel this is a bit overblown, especially for modern Rust. Personally I find that I am nearly as fast if not faster in coding in Rust as I am in other languages.
+However, I did find the learning experience quite difficult compared to other languages.&lt;&#x2F;p&gt;
+&lt;p&gt;Rust has a lot going on. It has a lot of features that you need to interact with in even simple programs.
+When learning Rust, one of the pain points I felt was the sheer amount of new concepts I had to learn to get up and running.
+While many of the features in Rust are worth while and improve the development experience they increase the learning curve of the language.&lt;&#x2F;p&gt;
+&lt;p&gt;As someone who has introduced Rust at their workplace and is viewed as the “Rust expert” &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;, I spend a lot of time teaching Rust and helping teams migrate to Rust.
+A good amount of effort for teams onboarding is getting up to speed with all of the features in Rust.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;new-syntax&quot;&gt;New Syntax&lt;&#x2F;h2&gt;
+&lt;p&gt;At this point in Rust’s life, new features should have pass high bar of scrutiny to be accepted.
+This is especially true for features that introduce new syntax.
+We already have a lot of syntax in Rust relative to other languages.
+Adding new syntax is a tradeoff between making things easier to write (and sometimes read) while requiring users to be aware of this semantics behind the syntax.&lt;&#x2F;p&gt;
+&lt;p&gt;Every time we add a new keyword it adds more things for the user to be familiar with to understand what a program does.
+The Rust type system gives the user many ways to express their problem, which is great but comes with the drawback of increasing burden to understand code that you did not write.
+I sometimes feel this in code reviews when the author uses a syntax that I do not commonly use.&lt;&#x2F;p&gt;
+&lt;p&gt;To point to a specific example where I think this is applicable is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rfcs&#x2F;pull&#x2F;3680&quot;&gt;RFC 3680&lt;&#x2F;a&gt;.
+To summarize the RFC (as currently written on May 3, 2025), It proposes that we reuse the &lt;code&gt;use&lt;&#x2F;code&gt; in a few new ways to make working with &lt;code&gt;Arc&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;Rc&lt;&#x2F;code&gt; a more ergonomic.
+As currently written, I do not think this RFC provides enough benefits to outweigh the downsides of introducing new syntax to the language.
+There are many comments on this RFC that echo similar sentiments.&lt;&#x2F;p&gt;
+&lt;p&gt;My goal is not to pick on this RFC (as the goal is noble) but simply to illustrate that bar to introduce new syntax&#x2F;keywords should be very high and needs to meaningfully solve existing problems.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;refining-existing-features&quot;&gt;Refining Existing Features&lt;&#x2F;h2&gt;
+&lt;p&gt;One interesting data point in the &lt;a href=&quot;https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2025&#x2F;02&#x2F;13&#x2F;2024-State-Of-Rust-Survey-results&#x2F;&quot;&gt;2024 State of Rust Survey&lt;&#x2F;a&gt; was the results of “What is your opinion on how fast Rust evolves?”&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;what-do-you-think-about-rust-evolution.svg&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;With the options provided I would probably fall into the “I am satisfied with the current pace of development” bucket.
+However, the current options miss the difference between introducing new features and improving existing features.&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-2-1&quot;&gt;&lt;a href=&quot;#fn-2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I find that I often desire improvements to existing Rust features rather than new features entirely.&lt;&#x2F;p&gt;
+&lt;p&gt;A great example of this is the “Async Rust”. Async Rust is not a new feature, but it still does not feel “complete”.
+Async traits are still not dyn comptaible without using &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;async-trait&#x2F;latest&#x2F;async_trait&#x2F;&quot;&gt;async_trait&lt;&#x2F;a&gt;, Async closures (this was stabilized in Rust 1.85), &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;async-fundamentals-initiative&#x2F;roadmap&#x2F;async_drop.html&quot;&gt;Async Drop&lt;&#x2F;a&gt; is still unstable.
+In 2025, I am the most excited about the &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rust-project-goals&#x2F;2025h1&#x2F;async.html&quot;&gt;project goal&lt;&#x2F;a&gt; to refine async rust.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tooling-features&quot;&gt;Tooling Features&lt;&#x2F;h2&gt;
+&lt;p&gt;Until now, I have been primarily talking about language features and not the greater Rust ecosystem.
+I have a very difficult perspective on adding new features to tools in the Rust ecosystem.&lt;&#x2F;p&gt;
+&lt;p&gt;Above I argue that introducing language features make the language more complex and introduces development friction when working in a team.
+For tooling features, this usually does not apply. For example, &lt;code&gt;cargo build&lt;&#x2F;code&gt; hides a lot of the complexity of interacting with &lt;code&gt;rustc&lt;&#x2F;code&gt; and makes Rust development vastly more approachable.
+Most tooling features reduce the complexity of Rust users need to deal with on a daily basis.&lt;&#x2F;p&gt;
+&lt;p&gt;I hope to see the ecosystem of Rust tools continue to expand and mature in the coming years. &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-3-1&quot;&gt;&lt;a href=&quot;#fn-3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;recap&quot;&gt;Recap&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Rust is already a relatively complex language. We need to be conservative when adding new features.&lt;&#x2F;li&gt;
+&lt;li&gt;New language features need to meaningfully solve problems that real users have.&lt;&#x2F;li&gt;
+&lt;li&gt;Refining existing features is not the same as introducing completely new features.&lt;&#x2F;li&gt;
+&lt;li&gt;New tooling features do not increase the language complexity in the same way as new language features.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;None of this is particularly ground breaking, but I think there is some value in having it written down as other may have opposing thoughts on how Rust should evolve.
+I am largely optmistic on Rust’s future but we as a community should be selective on which features we introduce into the language.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;footer class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;I would not call myself a “Rust expert”, but from my discussions with other in the community this is often how people that introduce Rust at their workplace are viewed. &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-2&quot;&gt;
+&lt;p&gt;It’s worth noting that this was &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.zulipchat.com&#x2F;#narrow&#x2F;channel&#x2F;122651-general&#x2F;topic&#x2F;Selected.20results.20from.20the.20State.20of.20Rust.202024.20annual.20survey&quot;&gt;discussed&lt;&#x2F;a&gt; in the Rust Zulip. And the survey will likely be tweaked to take this into account. &lt;a href=&quot;#fr-2-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-3&quot;&gt;
+&lt;p&gt;While introducing Rust at my workplace, many of the pain points I ran into were trying to make the Rust tools play nice with our existing systems. &lt;a href=&quot;#fr-3-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;footer&gt;
+</content>
+        <summary type="html">Thoughts on how Rust is evolving</summary>
+        </entry><entry xml:lang="en">
+        <title>YakMan</title>
+        <published>2023-11-30T00:00:00+00:00</published>
+        <updated>2023-11-30T00:00:00+00:00</updated>
+        <author>
+            <name>Ross Sullivan</name>
+        </author>
+        <link rel="alternate" href="https://ranger-ross.github.io/projects/yakman/" type="text/html"/>
+        <id>https://ranger-ross.github.io/projects/yakman/</id>
+        
+            <content type="html">&lt;h1 id=&quot;what-and-why&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#what-and-why&quot; aria-label=&quot;Anchor link for: what-and-why&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+What and why&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ranger-ross&#x2F;nihongo-stats&quot;&gt;YakMan&lt;&#x2F;a&gt; is a config manager for applications. In modern software development its very common to need to abstract some configuration out of applications so that it can be quickly changed without rebuilding&#x2F;deploying.&lt;&#x2F;p&gt;
+&lt;p&gt;There are already many solutions out there for managing config so why bother creating yet another?&lt;&#x2F;p&gt;
+&lt;p&gt;Let me answer this with a short story…&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;why&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#why&quot; aria-label=&quot;Anchor link for: why&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Why&lt;&#x2F;h3&gt;
+&lt;p&gt;I recently joined a new project and most of our configurations were either:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Hardcoded in the app&lt;&#x2F;li&gt;
+&lt;li&gt;Stored in Kubernetes manifest files&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Both of these required an application restart which at the time was slow and required a lot of red tape cutting to do.&lt;&#x2F;p&gt;
+&lt;p&gt;I thought surely there was some open source solution that would make this easy. But after researching for a few days, I felt that there was not a solution that I really loved.&lt;&#x2F;p&gt;
+&lt;p&gt;This lead me to create YakMan.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;goals&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#goals&quot; aria-label=&quot;Anchor link for: goals&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Goals&lt;&#x2F;h3&gt;
+&lt;p&gt;What I really wanted was a config manager that is:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Language agnostic&lt;&#x2F;li&gt;
+&lt;li&gt;Support basic organziation&#x2F;grouping featuers&lt;&#x2F;li&gt;
+&lt;li&gt;Bring your own storage. No vendor lock in and does not require a specific cloud&lt;&#x2F;li&gt;
+&lt;li&gt;Ability to hotswap config with application restarts&lt;&#x2F;li&gt;
+&lt;li&gt;Modular with the ability to extend if desired&lt;&#x2F;li&gt;
+&lt;li&gt;Some basic access control&lt;&#x2F;li&gt;
+&lt;li&gt;Free and open source&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h1 id=&quot;tech-stack&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#tech-stack&quot; aria-label=&quot;Anchor link for: tech-stack&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Tech Stack&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Rust&lt;&#x2F;li&gt;
+&lt;li&gt;Actix&lt;&#x2F;li&gt;
+&lt;li&gt;SvelteKit&lt;&#x2F;li&gt;
+&lt;li&gt;Tailwind&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;why-this-tech-stack&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#why-this-tech-stack&quot; aria-label=&quot;Anchor link for: why-this-tech-stack&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Why this tech stack&lt;&#x2F;h3&gt;
+&lt;p&gt;I started with the “core” config manager API. One of my goals is a modular design and being able to swap the UI for your own custom UI is important to the project. For that reason, I decided to go with Rust+Actix for the backend service to create a REST API. Rust is nice for its amazing DX and great type system.&lt;&#x2F;p&gt;
+&lt;p&gt;For the UI, I originally tried to use &lt;a href=&quot;https:&#x2F;&#x2F;leptos.dev&#x2F;&quot;&gt;Leptos&lt;&#x2F;a&gt; to keep everything in a single language (Rust). However, I ran into some challenges with Leptos:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Leptos at the time was very new (like a few month old) and this might it was still very rough around the edges.&lt;&#x2F;li&gt;
+&lt;li&gt;Lots of lifetime issues and fighting the borrow checker constantly.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;I think that Leptos has an awesome community and a bright future. The Discord was always very helpful for newcomers and there are a lot of smart people in it.
+But with being relatively new to Rust and Leptos being so young I had to make the hard decision to move to another frontend framework.&lt;&#x2F;p&gt;
+&lt;p&gt;I did some researching and considered my options, and finally landed on SvelteKit. I wanted YakMan to feel lightweight and very snappy, so I was hoping to avoid many V-Dom like React and Angular. I landed on Svelte because offers a very nice DX and makes state management very simple.&lt;&#x2F;p&gt;
+&lt;p&gt;And after a very large PR to replace Leptos with SvelteKit, I was left with the current tech stack for YakMan.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;lessons-learned&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#lessons-learned&quot; aria-label=&quot;Anchor link for: lessons-learned&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Lessons Learned&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;the-adapter-pattern-is-awesome&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#the-adapter-pattern-is-awesome&quot; aria-label=&quot;Anchor link for: the-adapter-pattern-is-awesome&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+The adapter pattern is awesome&lt;&#x2F;h3&gt;
+&lt;p&gt;One of the goals for this project is to be able to “bring your own storage” meaning if you on AWS you can S3. If you are GCP you can use Cloud Storage. If you already have a MySQL database and want to use that sure. Just want to store the files locally on an EC2 server, I probably wont reccomened it but you can. One of YakMan’s biggest features is being (somewhat) storage agnostic.&lt;&#x2F;p&gt;
+&lt;p&gt;To implement feature I used the &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Adapter_pattern&quot;&gt;adapter pattern&lt;&#x2F;a&gt;. I create a &lt;code&gt;StorageAdapter&lt;&#x2F;code&gt; trait in Rust (similar to an interface in our languages) that provided methods to read&#x2F;write data to different storage services. This was probably my best decision I made during the early development of this project.&lt;&#x2F;p&gt;
+&lt;p&gt;To add support for new storage service, I just needed to implement the &lt;code&gt;StorageAdapter&lt;&#x2F;code&gt; trait for that service and it would “just work.” It was honestly amazing to see YakMan run bug free on a completely different database after just 30 minutes of coding to add a new adapter.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;oauth-and-sso-can-be-tricky&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#oauth-and-sso-can-be-tricky&quot; aria-label=&quot;Anchor link for: oauth-and-sso-can-be-tricky&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+OAuth and SSO can be tricky&lt;&#x2F;h3&gt;
+&lt;p&gt;OAuth 2 is a very complicated protocol. There are many different “flows” and it a be tricky to work with especially if the OAuth provider does not follow all of standards.&lt;&#x2F;p&gt;
+&lt;p&gt;When implementing Single Sign On for YakMan, I ran into a handful of issues where OAuth providers just did not implement some part of the OAuth protocol. This was frustrating but taking a step back I can understand why. OAuth has been a constant work in progress for over a decade now. It has been implemented many RFCs and there are many flows that serve different purposes. It is understandable that not all providers support every feature to the latest RFC.&lt;&#x2F;p&gt;
+&lt;p&gt;This introduced some challenges and now I understand why many SaaS products charge for SSO. Its a lot of effort to maintain and very difficult to support all identity providers.&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">Basic, storage agnostic config manager</summary>
+        </entry><entry xml:lang="en">
+        <title>Nihongo Stats</title>
+        <published>2022-06-16T00:00:00+00:00</published>
+        <updated>2022-06-16T00:00:00+00:00</updated>
+        <author>
+            <name>Ross Sullivan</name>
+        </author>
+        <link rel="alternate" href="https://ranger-ross.github.io/projects/nihongo-stats/" type="text/html"/>
+        <id>https://ranger-ross.github.io/projects/nihongo-stats/</id>
+        
+            <content type="html">&lt;h1 id=&quot;what-and-why&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#what-and-why&quot; aria-label=&quot;Anchor link for: what-and-why&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+What and why&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nihongostats.com&#x2F;&quot;&gt;Nihongo Stats&lt;&#x2F;a&gt; is an Open Source webapp I built while learning Japanese. Learning a second language is a long process, and it is difficult to see your progress. I wanted a way to see some progress… I use various language learning apps, that happen to provide APIs. So the programmer in my thought&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I could use this data to visualize my progress&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;So I built a React app that fetches and displays graphs of various metrics.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;nihongo-stats.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;tech-stack&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#tech-stack&quot; aria-label=&quot;Anchor link for: tech-stack&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Tech Stack&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;React&lt;&#x2F;li&gt;
+&lt;li&gt;Vite&lt;&#x2F;li&gt;
+&lt;li&gt;TanStack Query (aka React Query)&lt;&#x2F;li&gt;
+&lt;li&gt;React Chart&lt;&#x2F;li&gt;
+&lt;li&gt;Nginx&lt;&#x2F;li&gt;
+&lt;li&gt;Cloud Run (Google Cloud Platform)&lt;&#x2F;li&gt;
+&lt;li&gt;GitHub Actions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;why-i-picked-these&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#why-i-picked-these&quot; aria-label=&quot;Anchor link for: why-i-picked-these&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Why I picked these&lt;&#x2F;h3&gt;
+&lt;p&gt;React&#x2F;JSX is my preferred why to write UIs.
+I started this project with “Create React App” but I migrated to Vite because the build&#x2F;dev speed is so much better. I considered NextJS but currently, it does not offer much due to the API rate limiting forcing the data fetching to be done client side.&lt;&#x2F;p&gt;
+&lt;p&gt;I use Cloud Run because, at the time GCP was what I was most familiar with. Cloud Run allows me to simply deploy a container and not worry about scaling. If I were to re-do this project, I would consider using Vercel due to its great CI&#x2F;CD.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;lessons-learned&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#lessons-learned&quot; aria-label=&quot;Anchor link for: lessons-learned&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Lessons Learned&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;typescript&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#typescript&quot; aria-label=&quot;Anchor link for: typescript&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Typescript&lt;&#x2F;h3&gt;
+&lt;p&gt;My biggest lesson learned during this project was that Typescript is basically a requirement in 2023. I started this project in Javascript because I thought&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This will be a simple project and I’ll be done quicker with Javascript since I won’t have to worry about types.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I couldn’t have been more wrong…&lt;&#x2F;p&gt;
+&lt;p&gt;This project does a lot of data mapping and the lack of types quickly made the code a mess. So many bugs were due to a property not existing or being named slightly differently (ie. &lt;code&gt;reviewDate&lt;&#x2F;code&gt; vs &lt;code&gt;reviewTimestamp&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;Adding Typescript to this project fixed many of those types of bugs.&lt;&#x2F;p&gt;
+&lt;p&gt;In my opinion, there are very few scenarios&#x2F;projects where not using Typescript is the better choice.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;caching-is-hard&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#caching-is-hard&quot; aria-label=&quot;Anchor link for: caching-is-hard&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Caching is hard&lt;&#x2F;h3&gt;
+&lt;p&gt;Due to the rate-limiting restrictions on Wanikani’s API, caching is data is very important for this app. When I started, this project I naively added my own cache… 🤦‍♂️&lt;&#x2F;p&gt;
+&lt;p&gt;Caching seems simple on the surface but quickly becomes very complex. I have moved my caching from a custom solution to using the browsers’ built-in cache and leveraging libraries like Tanstack Query.&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">A stats visualization tool for Japanese language learning platforms.</summary>
+        </entry>
+</feed>
