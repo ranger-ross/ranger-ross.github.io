@@ -78,7 +78,7 @@ While there are legitimate use cases for AI, many companies are jumping on AI to
 This is unfortunate for consumers of software but unlikely to change in the near future.
 
 Once the VC money eventually dries up and hype has died down, I am optimistic that trend of putting AI into everything will stop and we will see a more conservative thoughtful use of AI in applications.
-AI unlocks use cases that were previously not possible but it is not a silver bullet that solves all problems.
+AI unlocks use cases that were previously not possible but it is not a silver bullet that solves all problems and we are not guaranteed to see AGI anytime in the near future.
 
 
 ---
