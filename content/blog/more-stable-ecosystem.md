@@ -75,5 +75,5 @@ I want to point out that there are some crates like `serde` that reached `1.0.0`
 
 
 [^1]: So much so that a tool [cargo-semver-checks](https://crates.io/crates/cargo-semver-checks) has been created simply to make not publishing breaking changes by mistake
-[^2]: This behavior is conventent when you are early on in development of a crate and rapid breaking changes common.
+[^2]: This behavior is convenient when you are early on in development of a crate and rapid breaking changes are common.
 
