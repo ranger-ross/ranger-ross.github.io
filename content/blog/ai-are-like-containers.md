@@ -9,7 +9,7 @@ The utopic vision of AI automating all aspects of the development lifecycle is q
 There are a wide variety of views on this and I of course have my own. But I have been struggling to come up with a way to articulate my thoughts on where I think the future of AI in software development is going until earlier this week.
 
 I believe that AI will have a similar impact on the software industry as Docker and containers did in the 2010s.
-I'd like to make the case that AI **will** have a large impact on software industry but not as some may believe.
+I'd like to make the case that AI **will** have a large impact on software industry but not as large some may believe.
 
 ## Why containers?
 
@@ -24,13 +24,13 @@ My claim is that AI will have a similar level impact but in different ways.
 ## Agents and false dreams
 
 For the past 2 years, there has been a huge push to operationalize AI agents.
-The idea behind an agent is that is autonomous and does not require continual input from a human.
+The idea behind an agent is that it is autonomous and does not require continual input from a human.
 This frees up the human to do other more important work (or allows the companies replace them if you are cynical).
 
-The deploy of agents have been mixed thus far. There are sparks of brilliance with a lot of mediocre results in between.
-The fundamental issue that has emerged is AI is not reliable on non-trivial problems in real code base.
+The deployment of agents has been mixed thus far. There are sparks of brilliance with a lot of mediocre results in between.
+The fundamental issue that has emerged is AI is not reliable on non-trivial problems in real codebases.
 This is really bad for those that have the vision of replacing humans with agents because until they are reliable a human is needed to double check their work.
-AI reliability is not likely to dramatically improve with a fundamental reachitecture.
+AI reliability is not likely to dramatically improve without a fundamental reachitecture.
 
 The latest trend I have seen is the idea that a human operator will orchestrate many AI agents.
 A small army of AI agents would process in parallel and the human would verify and course correct as needed.
@@ -51,12 +51,12 @@ I believe the true advantage of AI is to get small frequent wins that add up ove
 In fact, I think a large amount of these tools are already available to us.
 
 * GitHub Copilot (not the agent) provides a AI autocomplete. This is generally focused to a single function making the possible number of mistakes smaller and being low overhead of a human to review and iterate on.
-* Using AI to review human created work (in fact I used ChatGPT to review this article)
+* Using AI to review human created work (in fact I used ChatGPT to review this blog post)
 * Using AI to orient yourself when working on a unfamiliar problem. Its great to get a rough overview a of problem space and learn some terminology so that you can refine your Google searches to find trust worthy sources.
 
 The important thing to note is that the high level functions of software development are not going anywhere.
-Software engineer, engineering management, project manager, and designer roles will still exist.
+Software engineering, engineering/project management, and designer roles will still exist.
 There will still need to be planning, development, testing, etc.
-Each of these processes will likely change in some ways (hopefully for the better) but the overall software process will largely remain unchanged, just like when containers became popular in the 2010s.
+Each of these roles and processes will likely change in some ways (hopefully for the better) but the overall software process will largely remain unchanged, just like when containers became popular in the 2010s.
 
 
