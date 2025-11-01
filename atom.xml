@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="https://ranger-ross.github.io/feed_style.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <tabi:metadata xmlns:tabi="https://github.com/welpo/tabi">
+        <tabi:base_url>https:&#x2F;&#x2F;ranger-ross.github.io</tabi:base_url>
+        <tabi:separator>
+            •
+        </tabi:separator>
+        <tabi:about_feeds>This is a web feed, also known as an Atom feed. Subscribe by copying the URL from the address bar into your newsreader. Visit About Feeds to learn more and get started. It&#x27;s free.</tabi:about_feeds>
+        <tabi:visit_the_site>Visit website</tabi:visit_the_site>
+        <tabi:recent_posts>Recent posts</tabi:recent_posts>
+        <tabi:last_updated_on>Updated on $DATE</tabi:last_updated_on>
+        <tabi:default_theme></tabi:default_theme>
+        <tabi:post_listing_date>date</tabi:post_listing_date>
+        <tabi:current_section>ranger-ross</tabi:current_section>
+    </tabi:metadata><link rel="extra-stylesheet" href="https://ranger-ross.github.io/skins/blue.css?h=a4dc1e94d3f5759784d2" /><title>ranger-ross</title>
+        <subtitle>Ross&#x27;s thoughts</subtitle>
+    <link href="https://ranger-ross.github.io/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://ranger-ross.github.io" rel="alternate" type="text/html"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-10-18T00:00:00+00:00</updated>
+    <id>https://ranger-ross.github.io/atom.xml</id><entry xml:lang="en">
+        <title>AI and (Docker) containers aren&#x27;t so different</title>
+        <published>2025-10-18T00:00:00+00:00</published>
+        <updated>2025-10-18T00:00:00+00:00</updated>
+        <author>
+            <name>Ross Sullivan</name>
+        </author>
+        <link rel="alternate" href="https://ranger-ross.github.io/blog/ai-are-like-containers/" type="text/html"/>
+        <id>https://ranger-ross.github.io/blog/ai-are-like-containers/</id>
+        
+            <content type="html">&lt;p&gt;Over the last few months I have been noticing a shift in the public perception of AI and how it will impact the software industry.
+The utopic vision of AI automating all aspects of the development lifecycle is quickly eroding.
+There are a wide variety of views on this and I of course have my own. But I have been struggling to come up with a way to articulate my thoughts on where I think the future of AI in software development is going until earlier this week.&lt;&#x2F;p&gt;
+&lt;p&gt;I believe that AI will have a similar impact on the software industry as Docker and containers did in the 2010s.
+I’d like to make the case that AI &lt;strong&gt;will&lt;&#x2F;strong&gt; have a large impact on software industry but not as large some may believe.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-containers&quot;&gt;Why containers?&lt;&#x2F;h2&gt;
+&lt;p&gt;The idea of containers has been around for a long time but really took off in the mid-2010s with the introduction of Docker which adds nice ideas like images and layering. These concepts made working with containers much easier and the trend of using containers exploded. Fast forward to the 2020s and most modern systems are deployed using containers.&lt;&#x2F;p&gt;
+&lt;p&gt;Containers changed the way we deploy and distribute our applications. Containers allowed you to deploy without the worry of if the server you deploy to had the correct dependencies installed. This portability was a game changer for complex applications, especially during the rise of cloud computing.
+Containers also made it very easy to distribute applications and tools with others. It’s fairly common to spin up a database using docker during development with a single &lt;code&gt;docker compose up&lt;&#x2F;code&gt; command.&lt;&#x2F;p&gt;
+&lt;p&gt;My point here is that containers undoubtly changed the way we write and develop software.
+My claim is that AI will have a similar level impact but in different ways.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;agents-and-false-dreams&quot;&gt;Agents and false dreams&lt;&#x2F;h2&gt;
+&lt;p&gt;For the past 2 years, there has been a huge push to operationalize AI agents.
+The idea behind an agent is that it is autonomous and does not require continual input from a human.
+This frees up the human to do other more important work (or allows the companies replace them if you are cynical).&lt;&#x2F;p&gt;
+&lt;p&gt;The deployment of agents has been mixed thus far. There are sparks of brilliance with a lot of mediocre results in between.
+The fundamental issue that has emerged is AI is not reliable on non-trivial problems in real codebases.
+This is really bad for those that have the vision of replacing humans with agents because until they are reliable a human is needed to double check their work.
+AI reliability is not likely to dramatically improve without a fundamental reachitecture.&lt;&#x2F;p&gt;
+&lt;p&gt;The latest trend I have seen is the idea that a human operator will orchestrate many AI agents.
+A small army of AI agents would process in parallel and the human would verify and course correct as needed.
+Having the AI do segments of work in the background would theoretically still be a productity win even if limited to the review speed of a single human.
+I think there is some reasonable application here but we are limited by the cognative load of the human operator.
+I don’t see a world where we are scale pass 3-5 agents per human on any non-trivial problems.
+There are just too many code changes for a human to reasonably be able to keep in their head and think about the edge cases where the AI may be doing something wrong.&lt;&#x2F;p&gt;
+&lt;p&gt;Agents may work in some limited areas but we are nowhere near a general purpose AI agent for for software development.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-more-realistic-impact&quot;&gt;A more realistic impact&lt;&#x2F;h2&gt;
+&lt;p&gt;AI is going to be a &lt;strong&gt;tool&lt;&#x2F;strong&gt; for engineers just like containers.
+I believe the future is going to largely dominated by high focused AI tools that accompish a very specific task in the development lifecycle.
+Similar to when containers were introduced, the overall approach we take to develop software will not change but the tools will.
+I believe the true advantage of AI is to get small frequent wins that add up overtime instead of trying to have an AI do large higher level tasks.&lt;&#x2F;p&gt;
+&lt;p&gt;In fact, I think a large amount of these tools are already available to us.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub Copilot (not the agent) provides a AI autocomplete. This is generally focused to a single function making the possible number of mistakes smaller and being low overhead of a human to review and iterate on.&lt;&#x2F;li&gt;
+&lt;li&gt;Using AI to review human created work (in fact I used ChatGPT to review this blog post)&lt;&#x2F;li&gt;
+&lt;li&gt;Using AI to orient yourself when working on a unfamiliar problem. Its great to get a rough overview a of problem space and learn some terminology so that you can refine your Google searches to find trust worthy sources.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;The important thing to note is that the high level functions of software development are not going anywhere.
+Software engineering, engineering&#x2F;project management, and designer roles will still exist.
+There will still need to be planning, development, testing, etc.
+Each of these roles and processes will likely change in some ways (hopefully for the better) but the overall software process will largely remain unchanged, just like when containers became popular in the 2010s.&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">Comparing the impact of AI on the software development industry</summary>
+        </entry><entry xml:lang="en">
+        <title>A more stable Rust Ecosystem</title>
+        <published>2025-09-23T00:00:00+00:00</published>
+        <updated>2025-09-23T00:00:00+00:00</updated>
+        <author>
+            <name>Ross Sullivan</name>
+        </author>
+        <link rel="alternate" href="https://ranger-ross.github.io/blog/more-stable-ecosystem/" type="text/html"/>
+        <id>https://ranger-ross.github.io/blog/more-stable-ecosystem/</id>
+        
+            <content type="html">&lt;p&gt;Rust is often praised for its ecosystem of packages (aka crates).
+While &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&quot;&gt;crates.io&lt;&#x2F;a&gt; and its ecosystem of crates is indeed a big feather in Rust’s cap, there has been a lingering issue with the wider ecosystem that has been irking me for sometime.
+This being the hesitancy by the community to publish 1.0 versions for crates.
+This post is my attempt to articulate my thoughts on this trend and why I think its holding back Rust.&lt;&#x2F;p&gt;
+&lt;p&gt;The Rust community is quite disciplined in following &lt;a href=&quot;https:&#x2F;&#x2F;semver.org&#x2F;&quot;&gt;SemVer&lt;&#x2F;a&gt; and avoiding breaking changes, at least compared to other languages. &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;
+It’s generally considered best practice to avoid breaking changes when making updates to a package.
+This is because when you make a breaking change in a popular crate, it causes a lot of churn downstream.
+Users need to read and comprehend the changes and modify their code requiring them to invest time in the upgrade.
+Frequent breaking changes cause a lot of pain for users!&lt;&#x2F;p&gt;
+&lt;p&gt;Since crate authors feel pressure to avoid breaking changes, they will avoid publishing a &lt;code&gt;1.0.0&lt;&#x2F;code&gt; of their crates.
+In SemVer versions prior to &lt;code&gt;1.0.0&lt;&#x2F;code&gt; consider MINOR changes as breaking changes.
+This means that going from &lt;code&gt;0.1.0&lt;&#x2F;code&gt; to &lt;code&gt;0.2.0&lt;&#x2F;code&gt; is a breaking change. &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-2-1&quot;&gt;&lt;a href=&quot;#fn-2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;
+Once a crate publishes a &lt;code&gt;1.0.0&lt;&#x2F;code&gt; its considered “stable” signifying breaking changes are expected less often.&lt;&#x2F;p&gt;
+&lt;p&gt;When Rust was early on many core crates were &lt;code&gt;0.x.x&lt;&#x2F;code&gt; to indicate to users that they were still trying to flesh out their APIs and experimenting with functionality.
+Crate authors did not want to commit to the current API and leave room for future changes.
+This was fine in 2015-2020, however fast forward to 2025 and we are in a very different landscape.
+We still have many core crates that have not stabilized.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-case-for-stabilizing&quot;&gt;The case for stabilizing&lt;&#x2F;h2&gt;
+&lt;p&gt;If you are a crate author, I want to make the case for you to consider pushing for a &lt;code&gt;1.0.0&lt;&#x2F;code&gt; release.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;eventually-what-you-got-is-what-you-got&quot;&gt;Eventually what you got is what you got&lt;&#x2F;h3&gt;
+&lt;p&gt;The most common argument to keeping a crate &lt;code&gt;0.x.x&lt;&#x2F;code&gt; is the author not wanting to “lock themselves into an API.”
+This is understandable and reasonable when your crate is early on, but at some point your crate is what it is.
+I have seen many crates, that have no active feature development but the author is still hesitant to publish a &lt;code&gt;1.0.0&lt;&#x2F;code&gt;.
+Your crate will never be perfect. If your crate is multiple years old, you should seriously consider publishing a &lt;code&gt;1.0.0&lt;&#x2F;code&gt;.
+It would be a better service to your users to stabilize your crate and consider a &lt;code&gt;2.0.0&lt;&#x2F;code&gt; if you really want to change the API in the future.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;your-crate-is-not-the-standard-library&quot;&gt;Your crate is not the standard library&lt;&#x2F;h3&gt;
+&lt;p&gt;I believe one of the reasons crate authors are hesitant to publish a &lt;code&gt;1.0.0&lt;&#x2F;code&gt; is because they see the backwards compatibly promises from the Rust Project (official tooling like Rustc, libstd, Cargo, etc) and feel pressure to have similar guarantees.
+While a noble aspiration, it’s unreasonable for every crate to have such stability guarantees.
+While Rust &lt;code&gt;2.0.0&lt;&#x2F;code&gt; is not planned, that should not prevent your crate from making a &lt;code&gt;2.0.0&lt;&#x2F;code&gt; release.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;unblocking-your-dependents-from-stabilizing&quot;&gt;Unblocking your dependents from stabilizing&lt;&#x2F;h3&gt;
+&lt;p&gt;Another good reason to consider stabilizing your crate is if your crate is a dependency for other crates.
+When low level crates are &lt;code&gt;0.x.x&lt;&#x2F;code&gt;, it prevents high level crates that depend on the low level crate from stabilizing.
+This has a compounding effect when their are multiple layers of dependencies.&lt;&#x2F;p&gt;
+&lt;p&gt;If some key crates hit &lt;code&gt;1.0.0&lt;&#x2F;code&gt; it would allow entire ecosystems of crates to stabilize.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;tooling&quot;&gt;Tooling&lt;&#x2F;h3&gt;
+&lt;p&gt;Many tools leverage the SemVer semantics for functionality including &lt;code&gt;cargo update&lt;&#x2F;code&gt;.
+These tools are less effective when crates are &lt;code&gt;0.x.x&lt;&#x2F;code&gt;.
+This is because MINOR changes are considered breaking changes so &lt;code&gt;cargo update&lt;&#x2F;code&gt; cannot safely update MINOR versions prior to &lt;code&gt;1.0.0&lt;&#x2F;code&gt;.
+Once a crate is &lt;code&gt;1.x.x&lt;&#x2F;code&gt; &lt;code&gt;cargo update&lt;&#x2F;code&gt; can update to the latest MINOR version allowing users to get new features of a crate much easier.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;the-social-component&quot;&gt;The social component&lt;&#x2F;h3&gt;
+&lt;p&gt;Even if your crate has been around for a long time and is reliable, being &lt;code&gt;0.x.x&lt;&#x2F;code&gt; gives the impression that its still alpha software.
+I believe having so many &lt;code&gt;0.x.x&lt;&#x2F;code&gt; core crates gives people outside the community the impression that it’s not ready for production deployments.
+Often enterprises have policies preventing &lt;code&gt;0.x.x&lt;&#x2F;code&gt; packages from being used in production.
+Sometimes these policies lead teams to use another language for their problem when Rust might have been an optimal choice.
+Whether you agree or disagree these kinds of policies, they exist and likely aren’t going anywhere.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping up&lt;&#x2F;h2&gt;
+&lt;p&gt;I hope that the arguments above at least make some crate authors consider stabilizing their crates.
+If you are still on the fence, I’d implore you to at least start a discussion in your issue tracker and consider a roadmap to &lt;code&gt;1.0.0&lt;&#x2F;code&gt; for your crate.
+I want to point out that there are some crates like &lt;code&gt;serde&lt;&#x2F;code&gt; that reached &lt;code&gt;1.0.0&lt;&#x2F;code&gt; fairly early on and I believe the Rust ecosystem is better because of that. We have also seen many other crates like &lt;code&gt;thiserror&lt;&#x2F;code&gt; and &lt;code&gt;derive_more&lt;&#x2F;code&gt; hit &lt;code&gt;1.0.0&lt;&#x2F;code&gt; recently which is very important for the long term health of the ecosystem.&lt;&#x2F;p&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;So much so that a tool &lt;a href=&quot;https:&#x2F;&#x2F;crates.io&#x2F;crates&#x2F;cargo-semver-checks&quot;&gt;cargo-semver-checks&lt;&#x2F;a&gt; has been created simply to make not publishing breaking changes by mistake &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-2&quot;&gt;
+&lt;p&gt;This behavior is convenient when you are early on in development of a crate and rapid breaking changes are common. &lt;a href=&quot;#fr-2-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;section&gt;
+</content>
+        <summary type="html">Thoughts on the state of the crates ecosystem</summary>
+        </entry><entry xml:lang="en">
+        <title>AGI is not guaranteed</title>
+        <published>2025-08-09T00:00:00+00:00</published>
+        <updated>2025-08-09T00:00:00+00:00</updated>
+        <author>
+            <name>Ross Sullivan</name>
+        </author>
+        <link rel="alternate" href="https://ranger-ross.github.io/blog/agi-is-not-guaranteed/" type="text/html"/>
+        <id>https://ranger-ross.github.io/blog/agi-is-not-guaranteed/</id>
+        
+            <content type="html">&lt;p&gt;I have seen a lot of bold claims about AI lately around its potential implications for the workforce.
+For example, the Anthropic CEO said that “in 3 to 6 months, AI will be writing 90% of code.” &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;
+Recently at work, a coworker said “Coding will become like art, where humans will only do it for pleasure” implying that AI will be so much more productive than humans.
+These conversations have led me to reflect on the state of AI and its future.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;where-we-are-today&quot;&gt;Where we are today&lt;&#x2F;h2&gt;
+&lt;p&gt;To think about the future we need to understand where we are currently.
+It’s been nearly 3 years since the initial release of ChatGPT at the time of writing.
+Since then we have seen a lot of improvement to the underlying models. Improved context windows, better weights through better training, new protocols that allow them to interact with external systems, etc.
+The latest frontier is agentic models with a heavy focus on coding.&lt;&#x2F;p&gt;
+&lt;p&gt;The current focus of many large tech firms is operationalizing AI agents to accelerate development and reduce the engineering headcount needed to deliver new features.
+With the state of current AI agents, they are capable of producing usable code in small and medium sized codebases.
+However, even in medium sized codebases these agents run into context window limitations and need to be used in short bursts or use some workarounds like “summarizing” context to make it smaller.
+Agents can be useful tools, but they appear to be just that, &lt;strong&gt;tools&lt;&#x2F;strong&gt;.
+Even with the state of the art models, they still need to be operated by a human that has some idea of what they are doing.
+At least in the short term the idea of a completely autonomous agent is not anywhere near practical.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;looking-to-the-future&quot;&gt;Looking to the future&lt;&#x2F;h2&gt;
+&lt;p&gt;While the current focus of many companies is agents, many AI companies have their eyes on artificial general intelligence or AGI.
+There are many definitions of AGI, but I am going to define it as: A machine or software that can match peak human performance at any task.
+In other words, anything you can do, it can do better.
+Many of the leaders in the AI space and government institutions believe that we are on a crash course to achieving AGI.&lt;&#x2F;p&gt;
+&lt;p&gt;This is concerning to me as there is nothing guaranteeing AGI will happen or even exists.
+There are important questions we need to answer first:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Is AGI even possible?&lt;&#x2F;li&gt;
+&lt;li&gt;Is the current approach to AI a local minima?&lt;&#x2F;li&gt;
+&lt;li&gt;How will we know if AGI is achieved?&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;The concept of AGI can certainly exist in a perfect world. However, we do not live in a perfect world.
+There are many equations in physics that have theoretical solutions but realistically will never happen due to environmental constraints.
+I believe the bar for AGI is not completely out of reach as it only needs to surpass humans, which are also imperfect.
+But we still need to take in the environmental constraints like energy production, training data, etc.&lt;&#x2F;p&gt;
+&lt;p&gt;Current AI models are notoriously resource intensive. Given that we do not even have a known end point for achieving AGI we also do not know how much energy is required to achieve AGI.
+For all we know the energy required to operate AGI could exceed the amount of available energy in our solar system.
+If this is the case, AGI would not be practically possible in my lifetime.
+I tend to believe it should be possible with much less energy, but the fact of the matter is we do not know.&lt;&#x2F;p&gt;
+&lt;p&gt;This leads me to ask is the current approach to AI even optimal in the first place?
+LLMs and RAGs have given us a great leap forward on AI progress but there is a potential that we are approaching a local minimum.
+In the short term, we see great improvements to AI capabilities but in the long term we hit limits to the algorithms and hardware.
+I tend to believe this is the case. Our models are very impressive from previous AI capabilities but we are starting to see diminishing returns on training and model&#x2F;context size. If we want to see more large leaps it will require going backwards (likely for years) to develop a new approach to model reality.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;agi.jpg&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Finally we have no way of knowing if we have achieved AGI.
+The best we have now are AI benchmarks and anecdotal evidence.
+AI benchmarks are a useful tool but it is unclear if scores relate to real world performance.
+We also see AI companies prioritizing these benchmarks while neglecting areas that are not tested by benchmarks.&lt;&#x2F;p&gt;
+&lt;p&gt;Given the state of AI capability measurement, I suspect we will see an AI company (or government) prematurely declare AGI has been achieved.
+There are many incentives to do so, so I would not find this as shocking to see in the next 5 years.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;is-all-lost&quot;&gt;Is all lost?&lt;&#x2F;h2&gt;
+&lt;p&gt;I tend to view the current AI hype cycle as a bubble no different than the dotcom bubble in the 1990s.
+All of the large AI companies are bleeding money and investors will only wait so long to see a return.
+The hype behind AI has not been what it can do, but what it can do now but what it will do in the future.
+Eventually, these companies will need to provide some path to sustainability and we have not seen any sign of that.&lt;&#x2F;p&gt;
+&lt;p&gt;However, this does not mean that all AI tools are useless.
+In the dotcom bubble of the 1990s, many companies failed but the actually useful products like Google survived and thrived.
+But for us to get there we will need to live through the AI bubble.&lt;&#x2F;p&gt;
+&lt;p&gt;We see a lot of companies feeling pressured to adopt AI.
+While there are legitimate use cases for AI, many companies are jumping on AI to please investors or simply out of &lt;a href=&quot;https:&#x2F;&#x2F;wikipedia.org&#x2F;wiki&#x2F;FOMO&quot;&gt;FOMO&lt;&#x2F;a&gt;.
+This is unfortunate for consumers of software but unlikely to change in the near future.&lt;&#x2F;p&gt;
+&lt;p&gt;Once the VC money eventually dries up and hype has died down, I am optimistic that trend of putting AI into everything will stop and we will see a more conservative thoughtful use of AI in applications.
+AI unlocks use cases that were previously not possible but it is not a silver bullet that solves all problems and we are not guaranteed to see AGI anytime in the near future.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.businessinsider.com&#x2F;anthropic-ceo-ai-90-percent-code-3-to-6-months-2025-3&quot;&gt;https:&#x2F;&#x2F;www.businessinsider.com&#x2F;anthropic-ceo-ai-90-percent-code-3-to-6-months-2025-3&lt;&#x2F;a&gt; &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;section&gt;
+</content>
+        <summary type="html">Thoughts on the state of AI progress</summary>
+        </entry><entry xml:lang="en">
+        <title>The Evolution of Rust</title>
+        <published>2025-05-03T00:00:00+00:00</published>
+        <updated>2025-05-03T00:00:00+00:00</updated>
+        <author>
+            <name>Ross Sullivan</name>
+        </author>
+        <link rel="alternate" href="https://ranger-ross.github.io/blog/evolution-of-rust/" type="text/html"/>
+        <id>https://ranger-ross.github.io/blog/evolution-of-rust/</id>
+        
+            <content type="html">&lt;p&gt;I started learning &lt;a href=&quot;https:&#x2F;&#x2F;www.rust-lang.org&#x2F;&quot;&gt;Rust&lt;&#x2F;a&gt; in late 2022 after finally giving into the hype.
+Two and a half years later I now completely understand why there is so much buzz around this language.
+It solves so many of the pain points I have had in other languages and I generally just find writing Rust more engaging.&lt;&#x2F;p&gt;
+&lt;p&gt;However, Rust is not all sunshine and rainbows. There are real pain points that need to be addressed if Rust wants to compete with other popular programming languages.
+Many of these pain points are well known (slow compile times, steep learning curve relative to other languages, etc) and I do not have much to add.
+But I do want to explore a topic that is less talked about but is very important in my mind.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Rust’s selection of new features and managing the complexity of the language&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Rust has been changing rapidly over the past 10 years and this has helped fuel it’s success.
+After 10 years since 1.0, Rust has a gained a lot of features.
+I have began to wonder if the pace of new feature additions is healthy long term.
+It begs the question “What will Rust look like in 2035?”&lt;&#x2F;p&gt;
+&lt;p&gt;To be clear, we need new Rust language features as we do not want to stagnate.
+But at what point is a language solidified and the pace of which large language features added slowed down?
+I am not saying Rust is at that point yet but its an interesting question to ponder.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;onboarding-friction&quot;&gt;Onboarding Friction&lt;&#x2F;h2&gt;
+&lt;p&gt;Rust has a reputation for being difficult to learn&#x2F;use compared to “higher” level languages like Javascript and GoLang.
+I feel this is a bit overblown, especially for modern Rust. Personally I find that I am nearly as fast if not faster in coding in Rust as I am in other languages.
+However, I did find the learning experience quite difficult compared to other languages.&lt;&#x2F;p&gt;
+&lt;p&gt;Rust has a lot going on. It has a lot of features that you need to interact with in even simple programs.
+When learning Rust, one of the pain points I felt was the sheer amount of new concepts I had to learn to get up and running.
+While many of the features in Rust are worth while and improve the development experience they increase the learning curve of the language.&lt;&#x2F;p&gt;
+&lt;p&gt;As someone who has introduced Rust at their workplace and is viewed as the “Rust expert” &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-1-1&quot;&gt;&lt;a href=&quot;#fn-1&quot;&gt;1&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;, I spend a lot of time teaching Rust and helping teams migrate to Rust.
+A good amount of effort for teams onboarding is getting up to speed with all of the features in Rust.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;new-syntax&quot;&gt;New Syntax&lt;&#x2F;h2&gt;
+&lt;p&gt;At this point in Rust’s life, new features should have pass high bar of scrutiny to be accepted.
+This is especially true for features that introduce new syntax.
+We already have a lot of syntax in Rust relative to other languages.
+Adding new syntax is a tradeoff between making things easier to write (and sometimes read) while requiring users to be aware of this semantics behind the syntax.&lt;&#x2F;p&gt;
+&lt;p&gt;Every time we add a new keyword it adds more things for the user to be familiar with to understand what a program does.
+The Rust type system gives the user many ways to express their problem, which is great but comes with the drawback of increasing burden to understand code that you did not write.
+I sometimes feel this in code reviews when the author uses a syntax that I do not commonly use.&lt;&#x2F;p&gt;
+&lt;p&gt;To point to a specific example where I think this is applicable is &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;rust-lang&#x2F;rfcs&#x2F;pull&#x2F;3680&quot;&gt;RFC 3680&lt;&#x2F;a&gt;.
+To summarize the RFC (as currently written on May 3, 2025), It proposes that we reuse the &lt;code&gt;use&lt;&#x2F;code&gt; in a few new ways to make working with &lt;code&gt;Arc&lt;&#x2F;code&gt;&#x2F;&lt;code&gt;Rc&lt;&#x2F;code&gt; a more ergonomic.
+As currently written, I do not think this RFC provides enough benefits to outweigh the downsides of introducing new syntax to the language.
+There are many comments on this RFC that echo similar sentiments.&lt;&#x2F;p&gt;
+&lt;p&gt;My goal is not to pick on this RFC (as the goal is noble) but simply to illustrate that bar to introduce new syntax&#x2F;keywords should be very high and needs to meaningfully solve existing problems.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;refining-existing-features&quot;&gt;Refining Existing Features&lt;&#x2F;h2&gt;
+&lt;p&gt;One interesting data point in the &lt;a href=&quot;https:&#x2F;&#x2F;blog.rust-lang.org&#x2F;2025&#x2F;02&#x2F;13&#x2F;2024-State-Of-Rust-Survey-results&#x2F;&quot;&gt;2024 State of Rust Survey&lt;&#x2F;a&gt; was the results of “What is your opinion on how fast Rust evolves?”&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;what-do-you-think-about-rust-evolution.svg&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;With the options provided I would probably fall into the “I am satisfied with the current pace of development” bucket.
+However, the current options miss the difference between introducing new features and improving existing features.&lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-2-1&quot;&gt;&lt;a href=&quot;#fn-2&quot;&gt;2&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I find that I often desire improvements to existing Rust features rather than new features entirely.&lt;&#x2F;p&gt;
+&lt;p&gt;A great example of this is the “Async Rust”. Async Rust is not a new feature, but it still does not feel “complete”.
+Async traits are still not dyn comptaible without using &lt;a href=&quot;https:&#x2F;&#x2F;docs.rs&#x2F;async-trait&#x2F;latest&#x2F;async_trait&#x2F;&quot;&gt;async_trait&lt;&#x2F;a&gt;, Async closures (this was stabilized in Rust 1.85), &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;async-fundamentals-initiative&#x2F;roadmap&#x2F;async_drop.html&quot;&gt;Async Drop&lt;&#x2F;a&gt; is still unstable.
+In 2025, I am the most excited about the &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.github.io&#x2F;rust-project-goals&#x2F;2025h1&#x2F;async.html&quot;&gt;project goal&lt;&#x2F;a&gt; to refine async rust.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;tooling-features&quot;&gt;Tooling Features&lt;&#x2F;h2&gt;
+&lt;p&gt;Until now, I have been primarily talking about language features and not the greater Rust ecosystem.
+I have a very difficult perspective on adding new features to tools in the Rust ecosystem.&lt;&#x2F;p&gt;
+&lt;p&gt;Above I argue that introducing language features make the language more complex and introduces development friction when working in a team.
+For tooling features, this usually does not apply. For example, &lt;code&gt;cargo build&lt;&#x2F;code&gt; hides a lot of the complexity of interacting with &lt;code&gt;rustc&lt;&#x2F;code&gt; and makes Rust development vastly more approachable.
+Most tooling features reduce the complexity of Rust users need to deal with on a daily basis.&lt;&#x2F;p&gt;
+&lt;p&gt;I hope to see the ecosystem of Rust tools continue to expand and mature in the coming years. &lt;sup class=&quot;footnote-reference&quot; id=&quot;fr-3-1&quot;&gt;&lt;a href=&quot;#fn-3&quot;&gt;3&lt;&#x2F;a&gt;&lt;&#x2F;sup&gt;&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;recap&quot;&gt;Recap&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Rust is already a relatively complex language. We need to be conservative when adding new features.&lt;&#x2F;li&gt;
+&lt;li&gt;New language features need to meaningfully solve problems that real users have.&lt;&#x2F;li&gt;
+&lt;li&gt;Refining existing features is not the same as introducing completely new features.&lt;&#x2F;li&gt;
+&lt;li&gt;New tooling features do not increase the language complexity in the same way as new language features.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;None of this is particularly ground breaking, but I think there is some value in having it written down as other may have opposing thoughts on how Rust should evolve.
+I am largely optmistic on Rust’s future but we as a community should be selective on which features we introduce into the language.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;section class=&quot;footnotes&quot;&gt;
+&lt;ol class=&quot;footnotes-list&quot;&gt;
+&lt;li id=&quot;fn-1&quot;&gt;
+&lt;p&gt;I would not call myself a “Rust expert”, but from my discussions with other in the community this is often how people that introduce Rust at their workplace are viewed. &lt;a href=&quot;#fr-1-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-2&quot;&gt;
+&lt;p&gt;It’s worth noting that this was &lt;a href=&quot;https:&#x2F;&#x2F;rust-lang.zulipchat.com&#x2F;#narrow&#x2F;channel&#x2F;122651-general&#x2F;topic&#x2F;Selected.20results.20from.20the.20State.20of.20Rust.202024.20annual.20survey&quot;&gt;discussed&lt;&#x2F;a&gt; in the Rust Zulip. And the survey will likely be tweaked to take this into account. &lt;a href=&quot;#fr-2-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li id=&quot;fn-3&quot;&gt;
+&lt;p&gt;While introducing Rust at my workplace, many of the pain points I ran into were trying to make the Rust tools play nice with our existing systems. &lt;a href=&quot;#fr-3-1&quot;&gt;↩&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;&#x2F;section&gt;
+</content>
+        <summary type="html">Thoughts on how Rust is evolving</summary>
+        </entry><entry xml:lang="en">
+        <title>YakMan</title>
+        <published>2023-11-30T00:00:00+00:00</published>
+        <updated>2023-11-30T00:00:00+00:00</updated>
+        <author>
+            <name>Ross Sullivan</name>
+        </author>
+        <link rel="alternate" href="https://ranger-ross.github.io/projects/yakman/" type="text/html"/>
+        <id>https://ranger-ross.github.io/projects/yakman/</id>
+        
+            <content type="html">&lt;h1 id=&quot;what-and-why&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#what-and-why&quot; aria-label=&quot;Anchor link for: what-and-why&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+What and why&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;ranger-ross&#x2F;nihongo-stats&quot;&gt;YakMan&lt;&#x2F;a&gt; is a config manager for applications. In modern software development its very common to need to abstract some configuration out of applications so that it can be quickly changed without rebuilding&#x2F;deploying.&lt;&#x2F;p&gt;
+&lt;p&gt;There are already many solutions out there for managing config so why bother creating yet another?&lt;&#x2F;p&gt;
+&lt;p&gt;Let me answer this with a short story…&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;why&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#why&quot; aria-label=&quot;Anchor link for: why&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Why&lt;&#x2F;h3&gt;
+&lt;p&gt;I recently joined a new project and most of our configurations were either:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Hardcoded in the app&lt;&#x2F;li&gt;
+&lt;li&gt;Stored in Kubernetes manifest files&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Both of these required an application restart which at the time was slow and required a lot of red tape cutting to do.&lt;&#x2F;p&gt;
+&lt;p&gt;I thought surely there was some open source solution that would make this easy. But after researching for a few days, I felt that there was not a solution that I really loved.&lt;&#x2F;p&gt;
+&lt;p&gt;This lead me to create YakMan.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;goals&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#goals&quot; aria-label=&quot;Anchor link for: goals&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Goals&lt;&#x2F;h3&gt;
+&lt;p&gt;What I really wanted was a config manager that is:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Language agnostic&lt;&#x2F;li&gt;
+&lt;li&gt;Support basic organziation&#x2F;grouping features&lt;&#x2F;li&gt;
+&lt;li&gt;Bring your own storage. No vendor lock in and does not require a specific cloud&lt;&#x2F;li&gt;
+&lt;li&gt;Ability to hotswap config with application restarts&lt;&#x2F;li&gt;
+&lt;li&gt;Modular with the ability to extend if desired&lt;&#x2F;li&gt;
+&lt;li&gt;Some basic access control&lt;&#x2F;li&gt;
+&lt;li&gt;Free and open source&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h1 id=&quot;tech-stack&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#tech-stack&quot; aria-label=&quot;Anchor link for: tech-stack&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Tech Stack&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Rust&lt;&#x2F;li&gt;
+&lt;li&gt;Actix&lt;&#x2F;li&gt;
+&lt;li&gt;SvelteKit&lt;&#x2F;li&gt;
+&lt;li&gt;Tailwind&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;why-this-tech-stack&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#why-this-tech-stack&quot; aria-label=&quot;Anchor link for: why-this-tech-stack&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Why this tech stack&lt;&#x2F;h3&gt;
+&lt;p&gt;I started with the “core” config manager API. One of my goals is a modular design and being able to swap the UI for your own custom UI is important to the project. For that reason, I decided to go with Rust+Actix for the backend service to create a REST API. Rust is nice for its amazing DX and great type system.&lt;&#x2F;p&gt;
+&lt;p&gt;For the UI, I originally tried to use &lt;a href=&quot;https:&#x2F;&#x2F;leptos.dev&#x2F;&quot;&gt;Leptos&lt;&#x2F;a&gt; to keep everything in a single language (Rust). However, I ran into some challenges with Leptos:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Leptos at the time was very new (like a few month old) and this might it was still very rough around the edges.&lt;&#x2F;li&gt;
+&lt;li&gt;Lots of lifetime issues and fighting the borrow checker constantly.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;I think that Leptos has an awesome community and a bright future. The Discord was always very helpful for newcomers and there are a lot of smart people in it.
+But with being relatively new to Rust and Leptos being so young I had to make the hard decision to move to another frontend framework.&lt;&#x2F;p&gt;
+&lt;p&gt;I did some researching and considered my options, and finally landed on SvelteKit. I wanted YakMan to feel lightweight and very snappy, so I was hoping to avoid many V-Dom like React and Angular. I landed on Svelte because offers a very nice DX and makes state management very simple.&lt;&#x2F;p&gt;
+&lt;p&gt;And after a very large PR to replace Leptos with SvelteKit, I was left with the current tech stack for YakMan.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;lessons-learned&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#lessons-learned&quot; aria-label=&quot;Anchor link for: lessons-learned&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Lessons Learned&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;the-adapter-pattern-is-awesome&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#the-adapter-pattern-is-awesome&quot; aria-label=&quot;Anchor link for: the-adapter-pattern-is-awesome&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+The adapter pattern is awesome&lt;&#x2F;h3&gt;
+&lt;p&gt;One of the goals for this project is to be able to “bring your own storage” meaning if you on AWS you can S3. If you are GCP you can use Cloud Storage. If you already have a MySQL database and want to use that sure. Just want to store the files locally on an EC2 server, I probably wont reccomened it but you can. One of YakMan’s biggest features is being (somewhat) storage agnostic.&lt;&#x2F;p&gt;
+&lt;p&gt;To implement feature I used the &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Adapter_pattern&quot;&gt;adapter pattern&lt;&#x2F;a&gt;. I create a &lt;code&gt;StorageAdapter&lt;&#x2F;code&gt; trait in Rust (similar to an interface in our languages) that provided methods to read&#x2F;write data to different storage services. This was probably my best decision I made during the early development of this project.&lt;&#x2F;p&gt;
+&lt;p&gt;To add support for new storage service, I just needed to implement the &lt;code&gt;StorageAdapter&lt;&#x2F;code&gt; trait for that service and it would “just work.” It was honestly amazing to see YakMan run bug free on a completely different database after just 30 minutes of coding to add a new adapter.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;oauth-and-sso-can-be-tricky&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#oauth-and-sso-can-be-tricky&quot; aria-label=&quot;Anchor link for: oauth-and-sso-can-be-tricky&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+OAuth and SSO can be tricky&lt;&#x2F;h3&gt;
+&lt;p&gt;OAuth 2 is a very complicated protocol. There are many different “flows” and it a be tricky to work with especially if the OAuth provider does not follow all of standards.&lt;&#x2F;p&gt;
+&lt;p&gt;When implementing Single Sign On for YakMan, I ran into a handful of issues where OAuth providers just did not implement some part of the OAuth protocol. This was frustrating but taking a step back I can understand why. OAuth has been a constant work in progress for over a decade now. It has been implemented many RFCs and there are many flows that serve different purposes. It is understandable that not all providers support every feature to the latest RFC.&lt;&#x2F;p&gt;
+&lt;p&gt;This introduced some challenges and now I understand why many SaaS products charge for SSO. Its a lot of effort to maintain and very difficult to support all identity providers.&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">Basic, storage agnostic config manager</summary>
+        </entry><entry xml:lang="en">
+        <title>Nihongo Stats</title>
+        <published>2022-06-16T00:00:00+00:00</published>
+        <updated>2022-06-16T00:00:00+00:00</updated>
+        <author>
+            <name>Ross Sullivan</name>
+        </author>
+        <link rel="alternate" href="https://ranger-ross.github.io/projects/nihongo-stats/" type="text/html"/>
+        <id>https://ranger-ross.github.io/projects/nihongo-stats/</id>
+        
+            <content type="html">&lt;h1 id=&quot;what-and-why&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#what-and-why&quot; aria-label=&quot;Anchor link for: what-and-why&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+What and why&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;nihongostats.com&#x2F;&quot;&gt;Nihongo Stats&lt;&#x2F;a&gt; is an Open Source webapp I built while learning Japanese. Learning a second language is a long process, and it is difficult to see your progress. I wanted a way to see some progress… I use various language learning apps, that happen to provide APIs. So the programmer in my thought&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I could use this data to visualize my progress&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;So I built a React app that fetches and displays graphs of various metrics.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;&#x2F;img&#x2F;nihongo-stats.png&quot; alt=&quot;&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;tech-stack&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#tech-stack&quot; aria-label=&quot;Anchor link for: tech-stack&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Tech Stack&lt;&#x2F;h1&gt;
+&lt;ul&gt;
+&lt;li&gt;React&lt;&#x2F;li&gt;
+&lt;li&gt;Vite&lt;&#x2F;li&gt;
+&lt;li&gt;TanStack Query (aka React Query)&lt;&#x2F;li&gt;
+&lt;li&gt;React Chart&lt;&#x2F;li&gt;
+&lt;li&gt;Nginx&lt;&#x2F;li&gt;
+&lt;li&gt;Cloud Run (Google Cloud Platform)&lt;&#x2F;li&gt;
+&lt;li&gt;GitHub Actions&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;why-i-picked-these&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#why-i-picked-these&quot; aria-label=&quot;Anchor link for: why-i-picked-these&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Why I picked these&lt;&#x2F;h3&gt;
+&lt;p&gt;React&#x2F;JSX is my preferred why to write UIs.
+I started this project with “Create React App” but I migrated to Vite because the build&#x2F;dev speed is so much better. I considered NextJS but currently, it does not offer much due to the API rate limiting forcing the data fetching to be done client side.&lt;&#x2F;p&gt;
+&lt;p&gt;I use Cloud Run because, at the time GCP was what I was most familiar with. Cloud Run allows me to simply deploy a container and not worry about scaling. If I were to re-do this project, I would consider using Vercel due to its great CI&#x2F;CD.&lt;&#x2F;p&gt;
+&lt;h1 id=&quot;lessons-learned&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#lessons-learned&quot; aria-label=&quot;Anchor link for: lessons-learned&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Lessons Learned&lt;&#x2F;h1&gt;
+&lt;h3 id=&quot;typescript&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#typescript&quot; aria-label=&quot;Anchor link for: typescript&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Typescript&lt;&#x2F;h3&gt;
+&lt;p&gt;My biggest lesson learned during this project was that Typescript is basically a requirement in 2023. I started this project in Javascript because I thought&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This will be a simple project and I’ll be done quicker with Javascript since I won’t have to worry about types.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;I couldn’t have been more wrong…&lt;&#x2F;p&gt;
+&lt;p&gt;This project does a lot of data mapping and the lack of types quickly made the code a mess. So many bugs were due to a property not existing or being named slightly differently (ie. &lt;code&gt;reviewDate&lt;&#x2F;code&gt; vs &lt;code&gt;reviewTimestamp&lt;&#x2F;code&gt;).&lt;&#x2F;p&gt;
+&lt;p&gt;Adding Typescript to this project fixed many of those types of bugs.&lt;&#x2F;p&gt;
+&lt;p&gt;In my opinion, there are very few scenarios&#x2F;projects where not using Typescript is the better choice.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;caching-is-hard&quot;&gt;&lt;a class=&quot;header-anchor no-hover-padding&quot; href=&quot;#caching-is-hard&quot; aria-label=&quot;Anchor link for: caching-is-hard&quot;&gt;&lt;span class=&quot;link-icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;&#x2F;span&gt;&lt;&#x2F;a&gt;
+Caching is hard&lt;&#x2F;h3&gt;
+&lt;p&gt;Due to the rate-limiting restrictions on Wanikani’s API, caching is data is very important for this app. When I started, this project I naively added my own cache… 🤦‍♂️&lt;&#x2F;p&gt;
+&lt;p&gt;Caching seems simple on the surface but quickly becomes very complex. I have moved my caching from a custom solution to using the browsers’ built-in cache and leveraging libraries like Tanstack Query.&lt;&#x2F;p&gt;
+</content>
+        <summary type="html">A stats visualization tool for Japanese language learning platforms.</summary>
+        </entry>
+</feed>
