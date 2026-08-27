@@ -24,19 +24,19 @@ thoughts in a reply without AI dumping a response. [^1] I say primarily because 
 If you are generating some artifact whose primary purpose is not human consumption, it feels fine to use AI if it saves you time. I generally tried to divide up communication into two categories: "For humans" and "Not for humans" and use that as a basis of whether it was acceptable to use AI.
 
 However, over the last few months my views on this have been challenged a couple of times.
-Recently I've been have a pretty good back and forth with a coworker who sees AI social etiquette differently than me.
+Recently I've been having a pretty good back and forth with a coworker who sees AI social etiquette differently than me.
 I will do my best to not misrepresent their argument, so to my understanding it effectively goes:
 
-> Content should be judged on it's quality regardless of whether its AI generated or human generated.
-> If the AI generated version is of the same quality level of what a human would produce, why does it matter
+> Content should be judged on its quality regardless of whether it's AI-generated or human-generated.
+> If the AI-generated version is of the same quality level as what a human would produce, why does it matter
 > how it is created?
 
 And honestly, I didn't have a good response to this.
 "Because we are humans and I don't want to talk to an AI" was the best that I could do at the time.
 I think it'd be easy to just dismiss this and move on but I've been thinking about this conversation lately wondering if my previous framing is incomplete or just wrong.
 
-Having sit on for a couple of weeks now I think perhaps my "for humans" - "not for humans" (FH/NFH) framework is too simplistic.
-For example, how is it any different if I send someone a Slack message and they google the answer and send me the answer vs using AI to get to the answer? It's just a tool, right? I think the knee jerk reaction of many (including myself) would be to say that the AI is not capable of verifying the truth, and they'd be right with current technology.
+Having sat on it for a couple of weeks now I think perhaps my "for humans" - "not for humans" (FH/NFH) framework is too simplistic.
+For example, how is it any different if I send someone a Slack message and they google the answer and send me the answer vs using AI to get to the answer? It's just a tool, right? I think the knee-jerk reaction of many (including myself) would be to say that the AI is not capable of verifying the truth, and they'd be right with current technology.
 But what about cases where they use AI as a shortcut but do something to verify the answer?
 Is it okay then?
 Do they need to change it or rewrite?
