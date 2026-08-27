@@ -1,17 +1,17 @@
 +++
 title = "AI social etiquette"
 date = "2026-08-27"
-description = "Observations on when its okay and not okay to AI generate content"
+description = "Observations on when its okay and not okay to AI-generate content"
 +++
 
-Lately I have been thinking a lot about when its socially acceptable to use AI generated content
+Lately I have been thinking a lot about when its socially acceptable to use AI-generated content
 when interacting with others. I am far from the only one to do so as there has been a lot of buzz around
 various open source projects setting AI policies. (Rust, Zig, Java, Linux, etc)
 Personally I have been grappling with this issue for a few months now and my opinion has been changing over time.
 I have heard a lot of good arguments on both sides for different situations that I'd like to go into in this post.
 
-As someone that is involved in open source software, I have paid loose attention to some of the AI policy discussions
-going on in different communities. OSS communities often ban AI content in forum where another human is going to read it. (e.g. GitHub issues, PR descriptions, comments, etc) This does not represent all OSS projects, but I find that is the general direction many seem to be going in.
+As someone who is involved in open source software, I have paid loose attention to some of the AI policy discussions
+going on in different communities. OSS communities often ban AI content in forums where another human is going to read it. (e.g. GitHub issues, PR descriptions, comments, etc) This does not represent all OSS projects, but I find that it is the general direction many seem to be going in.
 I also have a day job and have many coworkers that are enthusiastic about AI as a technology.
 I honestly wish I was as excited as other about AI, but I am happy they are enjoying it.
 
