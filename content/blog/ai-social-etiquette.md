@@ -12,16 +12,16 @@ I have heard a lot of good arguments on both sides for different situations that
 
 As someone who is involved in open source software, I have paid loose attention to some of the AI policy discussions
 going on in different communities. OSS communities often ban AI content in forums where another human is going to read it. (e.g. GitHub issues, PR descriptions, comments, etc) This does not represent all OSS projects, but I find that it is the general direction many seem to be going in.
-I also have a day job and have many coworkers that are enthusiastic about AI as a technology.
-I honestly wish I was as excited as other about AI, but I am happy they are enjoying it.
+I also have a day job and have many coworkers who are enthusiastic about AI as a technology.
+I honestly wish I was as excited as others about AI, but I am happy they are enjoying it.
 
 For the last few months my thinking has been:
 
 > If the primary purpose of the content is to be consumed by another human, you should not use AI.
 
-This feels right to me. If I spent my time to write out a message to you, I feel its common courtesy to write your
-thoughts in a reply without AI dumping a response. [^1] I say primarily because source code is meant to be consumed by humans, but I think at this point we can all agree that AI generated code _can_ be useful if done responsibly.
-If you are generating some artifact that's primary purpose it not human consumption, it feels fine to be to use AI if it saves you time. I generally tried to divide up communication into two categories: "For humans" and "Not for humans" and use that as a basis of whether it was acceptable to use AI.
+This feels right to me. If I spent my time to write out a message to you, I feel it's common courtesy to write your
+thoughts in a reply without AI dumping a response. [^1] I say primarily because source code is meant to be consumed by humans, but I think at this point we can all agree that AI-generated code _can_ be useful if done responsibly.
+If you are generating some artifact whose primary purpose is not human consumption, it feels fine to use AI if it saves you time. I generally tried to divide up communication into two categories: "For humans" and "Not for humans" and use that as a basis of whether it was acceptable to use AI.
 
 However, over the last few months my views on this have been challenged a couple of times.
 Recently I've been have a pretty good back and forth with a coworker who sees AI social etiquette differently than me.
