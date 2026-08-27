@@ -15,6 +15,8 @@ going on in different communities. OSS communities often ban AI content in forum
 I also have a day job and have many coworkers who are enthusiastic about AI as a technology.
 I honestly wish I was as excited as others about AI, but I am happy they are enjoying it.
 
+## For humans vs. Not for humans
+
 For the last few months my thinking has been:
 
 > If the primary purpose of the content is to be consumed by another human, you should not use AI.
@@ -22,6 +24,8 @@ For the last few months my thinking has been:
 This feels right to me. If I spent my time to write out a message to you, I feel it's common courtesy to write your
 thoughts in a reply without AI dumping a response. [^1] I say primarily because source code is meant to be consumed by humans, but I think at this point we can all agree that AI-generated code _can_ be useful if done responsibly.
 If you are generating some artifact whose primary purpose is not human consumption, it feels fine to use AI if it saves you time. I generally tried to divide up communication into two categories: "For humans" and "Not for humans" and use that as a basis of whether it was acceptable to use AI.
+
+## Too simple?
 
 However, over the last few months my views on this have been challenged a couple of times.
 Recently I've been having a pretty good back and forth with a coworker who sees AI social etiquette differently than me.
@@ -45,6 +49,8 @@ Is this basically the new [ship of Theseus](https://en.wikipedia.org/wiki/Ship_o
 
 I've been stuck thinking about this for a while.
 
+## What is okay?
+
 Today, there was an event at work which brought this topic back into my head.
 Basically it was a case of a person creating JIRA tasks with heavy usage of AI which lead to confusion because the AI had generated a wall of text with subtle mistakes causing the person doing the task to struggle.
 You could say that the person should not have used AI to create the tasks and I'd agree.
@@ -62,6 +68,8 @@ That said AI is cannot do these tasks to human level quality yet.
 Conflict occurs when someone uses AI for these kinds of use cases with the assumption that it will be able to do this kind of work good enough soon so we might as well start using them early, but leads to other suffering.
 While its very tempting, often using AI for these kinda of tasks ends up saving time for someone while taking it away from another.
 
+## Does it cost someone else?
+
 Maybe another way to view the social etiquette for using AI is:
 
 > Does this negatively affect someone else compared to if I would have otherwise created it by hand?
@@ -72,6 +80,8 @@ This makes the assumption that AI generated output is often overly verbose, whic
 In the ideal world where AI content was concise as human content maybe this way of viewing it wouldn't make sense, but we live in the real world.
 However if you take the time to clean up the AI's output such that it does not negatively impact other's maybe its fine.
 The trouble with this of course, is that its really difficult to cleanup AI output so often attempts to do so are sub par.
+
+## Where I've landed for now
 
 For me, I think there is a middle ground between these ways of approaching it.
 When communicating directly to another person you use your own words. Use AI as a tool and not a replacement.
