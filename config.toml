@@ -232,6 +232,7 @@ invert_title_order = false
 menu = [
     { name = "blog", url = "blog", trailing_slash = true },
     { name = "projects", url = "projects", trailing_slash = true },
+    { name = "resume", url = "resume", trailing_slash = true },
 ]
 
 # The RSS icon will be shown if (1) it's enabled and (2) the following variable is set to true.
@@ -297,7 +298,7 @@ allowed_domains = [
     { directive = "media-src", domains = ["'self'"] },
     { directive = "script-src", domains = ["'self'"] },
     { directive = "style-src", domains = ["'self'"] },
-    { directive = "frame-src", domains = ["player.vimeo.com", "https://www.youtube-nocookie.com"] },
+    { directive = "frame-src", domains = ["'self'", "player.vimeo.com", "https://www.youtube-nocookie.com"] },
 ]
 
 # Enable the CSP directives configured (or default).
