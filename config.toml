@@ -29,23 +29,19 @@ index_format = "elasticlunr_json"
 
 
 [markdown]
-highlight_code = true
 bottom_footnotes = true
-# To use a Zola built-in theme, CSP needs to allow unsafe-inline for style-src.
-highlight_theme = "css"
 smart_punctuation = true
+
+[markdown.highlighting]
+theme = "catppuccin-frappe"
+style = "class"
+error_on_missing_language = true
 
 
 [extra]
 # Check out the documentation (or the comments below) to learn how to customise tabi:
 # https://welpo.github.io/tabi/blog/mastering-tabi-settings/
 
-# Search index format.
-# For Zola 0.17.X users only.
-# This MUST MATCH the setting in [search].index_format.
-# Example: If [search].index_format is "elasticlunr_javascript", set:
-# index_format = "elasticlunr_javascript"
-# index_format = ""
 
 # Use sans-serif font everywhere.
 # By default, the serif font is only used in articles.
@@ -291,7 +287,7 @@ socials = [
 # Default directive is self.
 # Default config, allows for https remote images and embedding YouTube and Vimeo content.
 # This configuration (along with the right webserver settings) gets an A+ in Mozilla's Observatory: https://observatory.mozilla.org
-# Note: to use a Zola built-in syntax highlighting theme, allow unsafe-inline for style-src.
+# Class-based syntax highlighting works with style-src 'self'.
 allowed_domains = [
     { directive = "font-src", domains = ["'self'", "data:"] },
     { directive = "img-src", domains = ["'self'", "https://*", "data:"] },
