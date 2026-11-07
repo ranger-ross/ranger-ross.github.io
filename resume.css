@@ -1,0 +1,9 @@
+.resume-preview {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 80vh;
+    margin: 1rem 0 0;
+    aspect-ratio: auto;
+    border: 0;
+}
